@@ -27,7 +27,7 @@ app.post("/post", (req, res) => {
 
   console.log(body);
 
-  res.send({ body });
+  res.send({ acertos, errors, money, numberAcertos, mostAcertosStrategy, mostWrongStrategy });
 });
 
 app.listen(process.env.PORT || 3333, () => console.log("servidor ligado"));
