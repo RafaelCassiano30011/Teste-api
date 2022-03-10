@@ -9,6 +9,6 @@
   },
   "type": "module",
   "scripts": {
-    "start": "./index.js"
+    "start": "node index.js"
   }
 }
