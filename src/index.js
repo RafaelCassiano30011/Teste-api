@@ -25,7 +25,9 @@ app.post("/post", (req, res) => {
   numberAcertos = body.mostWrongStrategy;
   mostAcertosStrategy = body.mostAcertosStrategy;
 
-  res.send(`tudo ok`);
+  console.log(body);
+
+  res.send({ body });
 });
 
 app.listen(process.env.PORT || 3333, () => console.log("servidor ligado"));
