@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 
 let acertos = 0;
 let errors = 0;
@@ -8,8 +9,8 @@ let mostWrongStrategy = [];
 let mostAcertosStrategy = [];
 
 export const app = express();
-
 app.use(express.json());
+app.use(cors());
 
 app.get("/get", (req, res) => {
   res.send({ acertos, errors, money, numberAcertos, mostAcertosStrategy, mostWrongStrategy });
